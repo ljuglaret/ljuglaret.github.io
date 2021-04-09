@@ -9,7 +9,7 @@ License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1,
   <font id="fontawesome-free" horiz-adv-x="640">
     <font-face font-family="Font Awesome 5 Free"
       units-per-em="512" ascent="448"
-      descent="64"
+      descent="1164"
       font-weight="900"
       font-style="Solid" />
     <missing-glyph horiz-adv-x="0" />

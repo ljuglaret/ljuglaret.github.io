@@ -791,7 +791,7 @@
   margin: 0;
   font-size: 85%;
   background-color: rgba(27,31,35,.05);
-  border-radius: 3px;
+  border-radius: 10px;
 }
 
 .markdown-body pre {
