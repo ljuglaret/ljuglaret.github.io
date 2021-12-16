@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Laure Juglaret</title>
+    <link>https://ljuglaret.github.io/</link>
+    <description>Recent content on Laure Juglaret</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Dec 2021 19:05:37 +0100</lastBuildDate><atom:link href="https://ljuglaret.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calculatrice</title>
+      <link>https://ljuglaret.github.io/2021/12/calculatrice/</link>
+      <pubDate>Thu, 02 Dec 2021 19:05:37 +0100</pubDate>
+      
+      <guid>https://ljuglaret.github.io/2021/12/calculatrice/</guid>
+      <description>Version case of (avec elm) L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.
+Par exemple &amp;ldquo;2 + (3*4)&amp;rdquo; est une expression composée elle même de deux expressions:
+ 2 3*4  Définition d&amp;rsquo;une expression type Expr = Plus Expr Expr | Moins Expr Expr | Fois Expr Expr | Const Float L&amp;rsquo;exemple précédent s&amp;rsquo;écrit : Plus( (Const 2) , Fois ( Const(3) , Const (4)))</description>
+    </item>
+    
+    <item>
+      <title>Graphes</title>
+      <link>https://ljuglaret.github.io/2021/12/graphes/</link>
+      <pubDate>Thu, 02 Dec 2021 19:05:37 +0100</pubDate>
+      
+      <guid>https://ljuglaret.github.io/2021/12/graphes/</guid>
+      <description>Graphes Un graphe est une représentation d&amp;rsquo;un modèle composé de sommets (appelés noeuds)et d&amp;rsquo;arêtes (appelés lien) reliant certains de ces sommets.
+Exemple 1 Représentation des conditions de victoire du jeu pierre feuille ciseaux Mise en place Qu&amp;rsquo;il s&amp;rsquo;agisse de simulation de lancers de pièce ou des règles d&amp;rsquo;un jeu le principe est le même : Créer chaque noeuds et établir les liens qui existent entre eux.
+Ce qui peut se faire ainsi dans l&amp;rsquo;exemple du jeu :</description>
+    </item>
+    
+    <item>
+      <title>Visiteur Vs Case Of</title>
+      <link>https://ljuglaret.github.io/2021/12/visiteur-vs-case-of/</link>
+      <pubDate>Thu, 02 Dec 2021 19:05:37 +0100</pubDate>
+      
+      <guid>https://ljuglaret.github.io/2021/12/visiteur-vs-case-of/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bot Twitter</title>
+      <link>https://ljuglaret.github.io/2021/11/bot-twitter/</link>
+      <pubDate>Tue, 23 Nov 2021 19:05:37 +0100</pubDate>
+      
+      <guid>https://ljuglaret.github.io/2021/11/bot-twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Syracuse</title>
+      <link>https://ljuglaret.github.io/2021/10/syracuse/</link>
+      <pubDate>Sat, 02 Oct 2021 19:05:37 +0100</pubDate>
+      
+      <guid>https://ljuglaret.github.io/2021/10/syracuse/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
