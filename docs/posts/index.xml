@@ -13,9 +13,16 @@
       <pubDate>Thu, 02 Dec 2021 19:05:37 +0100</pubDate>
       
       <guid>https://ljuglaret.github.io/2021/12/calculatrice/</guid>
-      <description>Version case of (avec elm) L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.
-Par exemple &amp;ldquo;2 + (3*4)&amp;rdquo; est une expression composée elle même de deux expressions:
- 2 3*4  Définition d&amp;rsquo;une expression type Expr = Plus Expr Expr | Moins Expr Expr | Fois Expr Expr | Const Float L&amp;rsquo;exemple précédent s&amp;rsquo;écrit : Plus( (Const 2) , Fois ( Const(3) , Const (4)))</description>
+      <description>Calculatrice Présentation Il s&amp;rsquo;agit ici d&amp;rsquo;une version simplifée :
+  Calculs sur les réels
+  Opérations arithmétiques élémentaires :
+  Division
+  Multiplication
+  Addition
+  Soustraction
+    Possibilité d&amp;rsquo;effacer le dernier caractère saisi
+  Reprendre le calcul à partir de la dernière valeur calculée.
+  Méthode d&amp;rsquo;évaluation d&amp;rsquo;une expression artithmétique L&amp;rsquo;expression expression est stockée sous forme de chaîne de caractères.</description>
     </item>
     
     <item>
@@ -35,7 +42,9 @@ Ce qui peut se faire ainsi dans l&amp;rsquo;exemple du jeu :</description>
       <pubDate>Thu, 02 Dec 2021 19:05:37 +0100</pubDate>
       
       <guid>https://ljuglaret.github.io/2021/12/visiteur-vs-case-of/</guid>
-      <description></description>
+      <description>Version case of (avec elm) L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.
+Par exemple &amp;ldquo;2 + (3*4)&amp;rdquo; est une expression composée elle même de deux expressions:
+ 2 3*4  Définition d&amp;rsquo;une expression type Expr = Plus Expr Expr | Moins Expr Expr | Fois Expr Expr | Const Float L&amp;rsquo;exemple précédent s&amp;rsquo;écrit : Plus( (Const 2) , Fois ( Const(3) , Const (4)))</description>
     </item>
     
     <item>

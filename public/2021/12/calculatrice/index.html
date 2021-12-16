@@ -34,7 +34,7 @@
     }
     
   },
-  "description": "Version case of (avec elm) L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.\nPar exemple \u0026ldquo;2 + (3*4)\u0026rdquo; est une expression composée elle même de deux expressions:\n 2 3*4  Définition d\u0026rsquo;une expression type Expr = Plus Expr Expr | Moins Expr Expr | Fois Expr Expr | Const Float L\u0026rsquo;exemple précédent s\u0026rsquo;écrit : Plus( (Const 2) , Fois ( Const(3) , Const (4)))",
+  "description": "Calculatrice Présentation Il s\u0026rsquo;agit ici d\u0026rsquo;une version simplifée :\n  Calculs sur les réels\n  Opérations arithmétiques élémentaires :\n  Division\n  Multiplication\n  Addition\n  Soustraction\n    Possibilité d\u0026rsquo;effacer le dernier caractère saisi\n  Reprendre le calcul à partir de la dernière valeur calculée.\n  Méthode d\u0026rsquo;évaluation d\u0026rsquo;une expression artithmétique L\u0026rsquo;expression expression est stockée sous forme de chaîne de caractères.",
   "keywords": []
 }
 
@@ -45,26 +45,54 @@
 <meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Laure Juglaret">
 <meta name="keywords" content="">
-<meta name="description" content="Version case of (avec elm) L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.
-Par exemple &ldquo;2 &#43; (3*4)&rdquo; est une expression composée elle même de deux expressions:
- 2 3*4  Définition d&rsquo;une expression type Expr = Plus Expr Expr | Moins Expr Expr | Fois Expr Expr | Const Float L&rsquo;exemple précédent s&rsquo;écrit : Plus( (Const 2) , Fois ( Const(3) , Const (4)))">
+<meta name="description" content="Calculatrice Présentation Il s&rsquo;agit ici d&rsquo;une version simplifée :
+  Calculs sur les réels
+  Opérations arithmétiques élémentaires :
+  Division
+  Multiplication
+  Addition
+  Soustraction
+    Possibilité d&rsquo;effacer le dernier caractère saisi
+  Reprendre le calcul à partir de la dernière valeur calculée.
+  Méthode d&rsquo;évaluation d&rsquo;une expression artithmétique L&rsquo;expression expression est stockée sous forme de chaîne de caractères.">
 
 
-<meta property="og:description" content="Version case of (avec elm) L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.
-Par exemple &ldquo;2 &#43; (3*4)&rdquo; est une expression composée elle même de deux expressions:
- 2 3*4  Définition d&rsquo;une expression type Expr = Plus Expr Expr | Moins Expr Expr | Fois Expr Expr | Const Float L&rsquo;exemple précédent s&rsquo;écrit : Plus( (Const 2) , Fois ( Const(3) , Const (4)))">
+<meta property="og:description" content="Calculatrice Présentation Il s&rsquo;agit ici d&rsquo;une version simplifée :
+  Calculs sur les réels
+  Opérations arithmétiques élémentaires :
+  Division
+  Multiplication
+  Addition
+  Soustraction
+    Possibilité d&rsquo;effacer le dernier caractère saisi
+  Reprendre le calcul à partir de la dernière valeur calculée.
+  Méthode d&rsquo;évaluation d&rsquo;une expression artithmétique L&rsquo;expression expression est stockée sous forme de chaîne de caractères.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Calculatrice">
 <meta name="twitter:title" content="Calculatrice">
 <meta property="og:url" content="https://ljuglaret.github.io/2021/12/calculatrice/">
 <meta property="twitter:url" content="https://ljuglaret.github.io/2021/12/calculatrice/">
 <meta property="og:site_name" content="Laure Juglaret">
-<meta property="og:description" content="Version case of (avec elm) L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.
-Par exemple &ldquo;2 &#43; (3*4)&rdquo; est une expression composée elle même de deux expressions:
- 2 3*4  Définition d&rsquo;une expression type Expr = Plus Expr Expr | Moins Expr Expr | Fois Expr Expr | Const Float L&rsquo;exemple précédent s&rsquo;écrit : Plus( (Const 2) , Fois ( Const(3) , Const (4)))">
-<meta name="twitter:description" content="Version case of (avec elm) L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.
-Par exemple &ldquo;2 &#43; (3*4)&rdquo; est une expression composée elle même de deux expressions:
- 2 3*4  Définition d&rsquo;une expression type Expr = Plus Expr Expr | Moins Expr Expr | Fois Expr Expr | Const Float L&rsquo;exemple précédent s&rsquo;écrit : Plus( (Const 2) , Fois ( Const(3) , Const (4)))">
+<meta property="og:description" content="Calculatrice Présentation Il s&rsquo;agit ici d&rsquo;une version simplifée :
+  Calculs sur les réels
+  Opérations arithmétiques élémentaires :
+  Division
+  Multiplication
+  Addition
+  Soustraction
+    Possibilité d&rsquo;effacer le dernier caractère saisi
+  Reprendre le calcul à partir de la dernière valeur calculée.
+  Méthode d&rsquo;évaluation d&rsquo;une expression artithmétique L&rsquo;expression expression est stockée sous forme de chaîne de caractères.">
+<meta name="twitter:description" content="Calculatrice Présentation Il s&rsquo;agit ici d&rsquo;une version simplifée :
+  Calculs sur les réels
+  Opérations arithmétiques élémentaires :
+  Division
+  Multiplication
+  Addition
+  Soustraction
+    Possibilité d&rsquo;effacer le dernier caractère saisi
+  Reprendre le calcul à partir de la dernière valeur calculée.
+  Méthode d&rsquo;évaluation d&rsquo;une expression artithmétique L&rsquo;expression expression est stockée sous forme de chaîne de caractères.">
 <meta property="og:locale" content="en">
 
   
@@ -281,237 +309,99 @@ Par exemple &ldquo;2 &#43; (3*4)&rdquo; est une expression composée elle même 
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p><img src="calculatrice.png" alt=""></p>
-<h1 id="version-case-of-avec-elm">Version case of (avec elm)</h1>
-<p>L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.</p>
-<p>Par exemple &ldquo;2 + (3*4)&rdquo; est une expression composée elle même de deux expressions:</p>
+              <h1 id="calculatrice">Calculatrice</h1>
+<p><img src="calculatriceJava.png" alt=""></p>
+<h2 id="présentation">Présentation</h2>
+<p>Il s&rsquo;agit ici d&rsquo;une version simplifée :</p>
 <ul>
-<li>2</li>
-<li>3*4</li>
-</ul>
-<h2 id="définition-dune-expression">Définition d&rsquo;une expression</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elm" data-lang="elm"><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">Expr</span> <span style="color:#a6e22e">=</span> <span style="color:#66d9ef">Plus</span>     <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Expr</span>
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Moins</span>  <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Expr</span>
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Fois</span>   <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Expr</span> 
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Const</span>  <span style="color:#66d9ef">Float</span>
-
-</code></pre></div><p>L&rsquo;exemple précédent s&rsquo;écrit : Plus( (Const 2) , Fois ( Const(3) , Const (4)))</p>
-<h2 id="fonction-dévaluation">Fonction d&rsquo;évaluation</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elm" data-lang="elm">eval <span style="color:#a6e22e">:</span> <span style="color:#66d9ef">Expr</span> <span style="color:#a6e22e">-&gt;</span>  <span style="color:#66d9ef">Float</span>
-eval  o <span style="color:#a6e22e">=</span>
-    <span style="color:#66d9ef">case</span> o <span style="color:#66d9ef">of</span> 
-        <span style="color:#66d9ef">Plus</span>  x y <span style="color:#a6e22e">-&gt;</span>  (eval x ) <span style="color:#a6e22e">+</span> (eval  y)
-        <span style="color:#66d9ef">Moins</span> x y <span style="color:#a6e22e">-&gt;</span>  (eval x ) <span style="color:#a6e22e">-</span> (eval  y)
-        <span style="color:#66d9ef">Fois</span> x y  <span style="color:#a6e22e">-&gt;</span> (eval x ) <span style="color:#a6e22e">*</span> (eval  y)
-        <span style="color:#66d9ef">Const</span> x <span style="color:#a6e22e">-&gt;</span> x
-</code></pre></div><p>Déroulement de l&rsquo;évaluation :</p>
+<li>
+<p>Calculs sur les réels</p>
+</li>
+<li>
+<p>Opérations arithmétiques élémentaires :</p>
 <ul>
-<li>eval ( Plus (Const 2)  (Fois (Const 3)(Const 4)))</li>
-<li>Ici X = Const 2, et Y = Fois (Const 3)(Const 4)), Donc :</li>
-<li>eval ( Plus (Const 2)  (Fois (Const 3)(Const 4))) -&gt; (eval (Const 2)) + (eval(Fois (Const 3)(Const 4)))</li>
-<li>On peut remplacer eval(Const 2) par 2, on obtient :</li>
-<li>2 + (eval(Fois (Const 3)(Const 4)))
-Ici X = (Const 3) et Y = (Const 4) Donc :</li>
-<li>2 + (eval (Const 3)) * (eval(Const 4))</li>
-<li>On peut remplacer eval(Const 3) par 3 et eval(Const 4) par 4 on obtient :   2 + (3*4) = 2 + 12 = 14</li>
+<li>
+<p>Division</p>
+</li>
+<li>
+<p>Multiplication</p>
+</li>
+<li>
+<p>Addition</p>
+</li>
+<li>
+<p>Soustraction</p>
+</li>
 </ul>
-<h1 id="version-visitor-avec-java">Version visitor (avec Java)</h1>
-<h2 id="interface-visiteur">Interface Visiteur</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Visiteur</span><span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;{</span>
-        <span style="color:#66d9ef">public</span> R <span style="color:#a6e22e">visitConstante</span><span style="color:#f92672">(</span>Constante constante<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">public</span> R <span style="color:#a6e22e">visitProd</span><span style="color:#f92672">(</span>Prod prod<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">public</span> R <span style="color:#a6e22e">visitMoins</span><span style="color:#f92672">(</span>Moins moins<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">public</span> R <span style="color:#a6e22e">visitPlus</span><span style="color:#f92672">(</span>Plus plus<span style="color:#f92672">);</span>       
-        <span style="color:#66d9ef">public</span> R <span style="color:#a6e22e">visitPuissance</span><span style="color:#f92672">(</span>Puissance puissance<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="interface-expressionavisiter">Interface ExpressionAVisiter</h2>
-<p>Elle a une seule méthode : accept . Laquelle prend en entrée un visiteur de type R et retourne une valeur de type R.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ExpressionAVisiterr</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span>  <span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> R <span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span>Visiteur<span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> e1<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="définition-des-opérateurs">Définition des opérateurs</h2>
-<h3 id="plus">Plus</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Plus</span> <span style="color:#66d9ef">implements</span> Expr<span style="color:#f92672">{</span>
-
-    <span style="color:#66d9ef">private</span> Expr expr1<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> Expr expr2<span style="color:#f92672">;</span>
-    
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Plus</span><span style="color:#f92672">(</span>Expr expr1 <span style="color:#f92672">,</span> Expr expr2<span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">expr1</span> <span style="color:#f92672">=</span> expr1<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">expr2</span> <span style="color:#f92672">=</span> expr2<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> R <span style="color:#a6e22e">accept</span> <span style="color:#f92672">(</span>Visiteur<span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> visiteur <span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">return</span> visiteur<span style="color:#f92672">.</span><span style="color:#a6e22e">visitPlus</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
- <span style="color:#75715e">//à définir : getExpr1();getExpr2()
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</code></pre></div><p>Les  opérateurs Prod et Moins sont construits de la même manière, c&rsquo;est la méthode accept qui change.</p>
-<h2 id="moins">Moins</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> R <span style="color:#a6e22e">accept</span> <span style="color:#f92672">(</span>Visiteur<span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> visiteur <span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">return</span> visiteur<span style="color:#f92672">.</span><span style="color:#a6e22e">visitMoins</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="prod">Prod</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> R <span style="color:#a6e22e">accept</span> <span style="color:#f92672">(</span>Visiteur<span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> visiteur <span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">return</span> visiteur<span style="color:#f92672">.</span><span style="color:#a6e22e">visitProd</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>Le cas de Constante est un peu différent puisqu&rsquo;il son opérande n&rsquo;est pas une expression mais une valeur numérique</p>
-<h2 id="constante">Constante</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Constante</span> <span style="color:#66d9ef">implements</span> Expr<span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> valeur<span style="color:#f92672">;</span>
-    
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Constante</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> valeur<span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">valeur</span> <span style="color:#f92672">=</span> valeur<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> R <span style="color:#a6e22e">accept</span> <span style="color:#f92672">(</span>Visiteur<span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> visiteur <span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">return</span> visiteur<span style="color:#f92672">.</span><span style="color:#a6e22e">visitConstante</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
- <span style="color:#75715e">//à définir : getValeur();
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</code></pre></div><h2 id="classe-visiteurcalculreel">Classe VisiteurCalculReel</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">VisiteurCalculReel</span> <span style="color:#66d9ef">implements</span> Visiteur<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#66d9ef">public</span> Double  <span style="color:#a6e22e">visitConstante</span><span style="color:#f92672">(</span>Constante constante<span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">return</span> constante<span style="color:#f92672">.</span><span style="color:#a6e22e">getValeur</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> Double <span style="color:#a6e22e">visitProd</span><span style="color:#f92672">(</span>Prod prod<span style="color:#f92672">){</span>
-        Double evalExpr1 <span style="color:#f92672">=</span>  prod<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        Double evalExpr2 <span style="color:#f92672">=</span>  prod<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr2</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">return</span> evalExpr1 <span style="color:#f92672">*</span> evalExpr2<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> Double <span style="color:#a6e22e">visitMoins</span><span style="color:#f92672">(</span>Moins moins<span style="color:#f92672">){</span>
-        Double evalExpr1 <span style="color:#f92672">=</span>  moins<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        Double evalExpr2 <span style="color:#f92672">=</span>  moins<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr2</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">return</span> evalExpr1 <span style="color:#f92672">-</span> evalExpr2<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> Double <span style="color:#a6e22e">visitPlus</span><span style="color:#f92672">(</span>Plus plus<span style="color:#f92672">){</span>
-        Double evalExpr1 <span style="color:#f92672">=</span>  plus<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        Double evalExpr2 <span style="color:#f92672">=</span>  plus<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr2</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">return</span> evalExpr1 <span style="color:#f92672">+</span> evalExpr2<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> Double <span style="color:#a6e22e">visitPuissance</span><span style="color:#f92672">(</span>Puissance puissance<span style="color:#f92672">){</span>
-        Double evalExpr1 <span style="color:#f92672">=</span>  puissance<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">double</span> n <span style="color:#f92672">=</span>  puissance<span style="color:#f92672">.</span><span style="color:#a6e22e">getN</span><span style="color:#f92672">();</span>
-        <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>evalExpr1 <span style="color:#f92672">,</span> n<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-
-</code></pre></div><p>On viste l&rsquo;expression : new Plus (new Constante(2) , new Produit(new Constante(3) , new Constante(4)))<br>
-On obtient successivement :</p>
+</li>
+<li>
+<p>Possibilité d&rsquo;effacer le dernier caractère saisi</p>
+</li>
+<li>
+<p>Reprendre le calcul à partir de la dernière valeur calculée.</p>
+</li>
+</ul>
+<h2 id="méthode-dévaluation-dune-expression-artithmétique">Méthode d&rsquo;évaluation d&rsquo;une expression artithmétique</h2>
+<p>L&rsquo;expression <strong>expression</strong> est stockée sous forme de chaîne de caractères.<br>
+Deux piles sont initialisées :</p>
 <ul>
-<li>(new Constante(2)) + (new Produit(new Constante(3) , new Constante(4)))</li>
-<li>2 + ((new Constante(3) * new Constante(4)))</li>
-<li>2  + ( 3 * 4)</li>
-<li>14</li>
+<li><strong>ops</strong> pour stocker les opérateurs : + - * /</li>
+<li><strong>pileExpression</strong> pour stocker les valeurs sucessives de <strong>expression</strong>.</li>
 </ul>
-<h1 id="et-si-">Et si ?</h1>
-<h2 id="et-si-on-voulait-ajouter-un-opérateur">Et si on voulait ajouter un opérateur?</h2>
-<p><img src="plusDeVisites.png" alt=""></p>
-<p>Par exemple comment ajouter les opérateurs cosinus, sinus et tangeante?<br>
-Dans les deux cas il faut :</p>
+<p>La méthode <em>effectuerCalcul(ops , pile expression)</em> utilisée est définie ainsi:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Pour rappel, la méthode <em>pop</em> d&rsquo;une pile retourne son sommet et le retire de la pile.</p>
+<p>Chaque caractère de l&rsquo;expression arithmétique est lu.</p>
 <ul>
-<li>les ajouter au type expression</li>
-<li>définir leur calcul</li>
+<li>
+<p>Si le caractère est un opérateur (<strong>opi</strong>), alors :</p>
+<ul>
+<li>
+<p>Soit l&rsquo;opérateur au sommet (<strong>opSommet</strong>) de la pile <strong>ops</strong> est prioritaire par rapport à <strong>opi</strong> et dans ce cas la méthode <em>effectuerCalcul(ops , pile expression)</em> est appelée</p>
+</li>
+<li>
+<p>Soit il ne l&rsquo;est pas et opi est simplement stockée au sommet de <strong>ops</strong>.</p>
+</li>
 </ul>
-<p>Donc en elm :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elm" data-lang="elm"><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">Expr</span> <span style="color:#a6e22e">=</span> <span style="color:#66d9ef">Plus</span>     <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Expr</span>
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Moins</span>  <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Expr</span>
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Fois</span>   <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Expr</span> 
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Const</span>  <span style="color:#66d9ef">Float</span>
+</li>
+<li>
+<p>Si le caractère est un chiffre alors cette lecture continue tant que le carcactère suivant est lui aussi un nombre ou un . (pour pouvoir stocker des réels)</p>
+</li>
+<li>
+<p>Si le caractère est une parenthèse ouvrante alors il est stocké au sommet de <strong>ops</strong>.</p>
+</li>
+<li>
+<p>Si le caractère est une parenthèse fermante alors tant que le sommet de <strong>ops</strong> n&rsquo;est pas une parenthèse ouvrante la méthode <em>effectuerCalcul(ops , pile expression)</em> est appelée.<br>
+Ensuite <strong>ops</strong> est dépilé.<br>
+Par exemple pour l&rsquo;expression : 1+(2+(3+4)) les états successifs de <strong>pileExpression</strong> sont</p>
+<pre><code>1  
+1 2    
+1 2 3    
+1 2 3 4      
+1 2 7   
+1 9    
+10   
+</code></pre>
+<p>et ceux de <strong>ops</strong> sont</p>
+<pre><code>+   
++ (    
++ ( +   
++ ( + (        
++ ( + ( +
+</code></pre>
+</li>
+</ul>
+<h2 id="exemples">Exemples</h2>
+<p>Illustrations de ce qui se passe au niveau de la pile des opérateurs et de la pile servant à stocker les résultats successifs de l&rsquo;évaluation d&rsquo;une expression.</p>
+<p>Ces résultats sont aussi observables dans le fichier généré par les logs : <strong>logs/logPileCalculs.log</strong></p>
+<p><img src="exemplesPile.jpg" alt=""></p>
+<h2 id="utilisation-">Utilisation :</h2>
+<ul>
+<li>Cloner le projet</li>
+<li>Dans un terminal : java -jar calculatrice-0.1.0.jar</li>
+</ul>
 
-</code></pre></div><p>devient</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elm" data-lang="elm"><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">Expr</span> <span style="color:#a6e22e">=</span> <span style="color:#66d9ef">Plus</span>     <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Expr</span>
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Moins</span>  <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Expr</span>
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Fois</span>   <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Expr</span> 
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Const</span>  <span style="color:#66d9ef">Expr</span> 
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Cos</span>    <span style="color:#66d9ef">Expr</span> 
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Sin</span>    <span style="color:#66d9ef">Expr</span> 
-            <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Tan</span>    <span style="color:#66d9ef">Expr</span> 
-</code></pre></div><p>et trois cas doivent être ajoutés à éval</p>
-<ul>
-<li>Cos x -&gt;    cos(eval x )</li>
-<li>Sin x -&gt;    sin(eval x )</li>
-<li>Tan x -&gt;    tan(eval x )</li>
-</ul>
-<p>En java c&rsquo;est exactement le même principe.<br>
-On ajoute trois nouvelles méthodes à l&rsquo;interface Visiteur</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Visiteur</span><span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;{</span>
-        <span style="color:#75715e">//.....  
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">public</span> R <span style="color:#a6e22e">visitCos</span><span style="color:#f92672">(</span>Cosinus cosinus<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">public</span> R <span style="color:#a6e22e">visitSin</span><span style="color:#f92672">(</span>Sinus sinus<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">public</span> R <span style="color:#a6e22e">visitTan</span><span style="color:#f92672">(</span>Tan tan<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>Avec les trois classes correspondantes</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cosinus</span> <span style="color:#66d9ef">implements</span> Expr<span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> Expr expr1<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Cosinus</span><span style="color:#f92672">(</span>Expr expr1<span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">expr1</span> <span style="color:#f92672">=</span> expr1<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> R <span style="color:#a6e22e">accept</span> <span style="color:#f92672">(</span>Visiteur<span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> visiteur <span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">return</span> visiteur<span style="color:#f92672">.</span><span style="color:#a6e22e">visitCos</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
- <span style="color:#75715e">//à définir : getExpr1();
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</code></pre></div><p>Sinus et Tan sont similaires, seule la fonction accept est modifiée :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> R <span style="color:#a6e22e">accept</span> <span style="color:#f92672">(</span>Visiteur<span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> visiteur <span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">return</span> visiteur<span style="color:#f92672">.</span><span style="color:#a6e22e">visitSin</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> R <span style="color:#a6e22e">accept</span> <span style="color:#f92672">(</span>Visiteur<span style="color:#f92672">&lt;</span>R<span style="color:#f92672">&gt;</span> visiteur <span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">return</span> visiteur<span style="color:#f92672">.</span><span style="color:#a6e22e">visitTan</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>Il faut maintenant indiquer comment ces expressions sont évaluées<br>
-Dans calcul :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> Double <span style="color:#a6e22e">visitCos</span><span style="color:#f92672">(</span>Cosinus cosinus<span style="color:#f92672">){</span>
-             Double evalExpr1 <span style="color:#f92672">=</span>  cosinus<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-             <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">cos</span><span style="color:#f92672">(</span>evalExpr1<span style="color:#f92672">);</span>
-         <span style="color:#f92672">}</span>
- <span style="color:#66d9ef">public</span> Double <span style="color:#a6e22e">visitSin</span><span style="color:#f92672">(</span>Sinus sinus<span style="color:#f92672">){</span>
-             Double evalExpr1 <span style="color:#f92672">=</span>  sinus<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-             <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">sin</span><span style="color:#f92672">(</span>evalExpr1<span style="color:#f92672">);</span>
-         <span style="color:#f92672">}</span>
- <span style="color:#66d9ef">public</span> Double <span style="color:#a6e22e">visitTan</span><span style="color:#f92672">(</span>Tan tan<span style="color:#f92672">){</span>
-             Double evalExpr1 <span style="color:#f92672">=</span>  tan<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-             <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">tan</span><span style="color:#f92672">(</span>evalExpr1<span style="color:#f92672">);</span>
-         <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="et-si-on-voulait-changer-la-méthode-de-calcul">Et si on voulait changer la méthode de calcul?</h2>
-<p><img src="plusDeVisiteurs.png" alt=""></p>
-<p>On pourrait vouloir visiter la même expression mais changer l&rsquo;implémentation du visiteur.
-Par exemple</p>
-<ul>
-<li>Plus(d1,d2)     =   &ldquo;(d1 + d2)&rdquo;</li>
-<li>Moins(d1,d2)    =   &ldquo;(d1 - d2)&rdquo;</li>
-<li>Prod(d1,d2)     =   &ldquo;(d1 * d2)&rdquo;</li>
-</ul>
-<p>Pour cela il faut ajouter une nouvelle classe : VisiteurOperationString, laquelle implémentera Visiteur.<br>
-Il faut uniquement définir les méthodes de l&rsquo;interface Visiteur :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">VisiteurCalculString</span>  <span style="color:#66d9ef">implements</span> Visiteur<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
-  <span style="color:#66d9ef">public</span> String  <span style="color:#a6e22e">visitConstante</span><span style="color:#f92672">(</span>Constante constante<span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">return</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>constante<span style="color:#f92672">.</span><span style="color:#a6e22e">getValeur</span><span style="color:#f92672">());</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">visitProd</span><span style="color:#f92672">(</span>Prod prod<span style="color:#f92672">){</span>
-        String evalExpr1 <span style="color:#f92672">=</span>  prod<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        String evalExpr2 <span style="color:#f92672">=</span>  prod<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr2</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#f92672">+</span>  evalExpr1 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;*&#34;</span> <span style="color:#f92672">+</span> evalExpr2 <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;)&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">visitMoins</span><span style="color:#f92672">(</span>Moins moins<span style="color:#f92672">){</span>
-        String evalExpr1 <span style="color:#f92672">=</span>  moins<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        String evalExpr2 <span style="color:#f92672">=</span>  moins<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr2</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#f92672">+</span>  evalExpr1 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> evalExpr2 <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;)&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">visitPlus</span><span style="color:#f92672">(</span>Plus plus<span style="color:#f92672">){</span>
-        String evalExpr1 <span style="color:#f92672">=</span>  plus<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        String evalExpr2 <span style="color:#f92672">=</span>  plus<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr2</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#f92672">+</span>  evalExpr1 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;+&#34;</span> <span style="color:#f92672">+</span> evalExpr2 <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;)&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">visitPuissance</span><span style="color:#f92672">(</span>Puissance puissance<span style="color:#f92672">){</span>
-        String evalExpr1 <span style="color:#f92672">=</span>  puissance<span style="color:#f92672">.</span><span style="color:#a6e22e">getExpr1</span><span style="color:#f92672">().</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">double</span> n <span style="color:#f92672">=</span>  puissance<span style="color:#f92672">.</span><span style="color:#a6e22e">getN</span><span style="color:#f92672">();</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#f92672">+</span>  evalExpr1 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;^&#34;</span> <span style="color:#f92672">+</span> n <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;)&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
               
 
 

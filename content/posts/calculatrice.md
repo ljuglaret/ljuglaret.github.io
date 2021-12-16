@@ -6,276 +6,103 @@ thumbnailImage: ../img/calculatrice0.png
 
 ---
 
-![](calculatrice.png)
+# Calculatrice
 
-# Version case of (avec elm)
-L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.  
+![](calculatriceJava.png)
 
-Par exemple "2 + (3*4)" est une expression composée elle même de deux expressions:
--   2 
--   3*4
+## Présentation
 
-## Définition d'une expression
-``` elm
-type Expr = Plus     Expr Expr
-            | Moins  Expr Expr
-            | Fois   Expr Expr 
-            | Const  Float
+Il s'agit ici d'une version simplifée :
 
-```
+-   Calculs sur les réels
 
-
-L'exemple précédent s'écrit : Plus( (Const 2) , Fois ( Const(3) , Const (4))) 
-
-
-## Fonction d'évaluation
-``` elm
-eval : Expr ->  Float
-eval  o =
-    case o of 
-        Plus  x y ->  (eval x ) + (eval  y)
-        Moins x y ->  (eval x ) - (eval  y)
-        Fois x y  -> (eval x ) * (eval  y)
-        Const x -> x
-```
-Déroulement de l'évaluation :   
-- eval ( Plus (Const 2)  (Fois (Const 3)(Const 4)))
-- Ici X = Const 2, et Y = Fois (Const 3)(Const 4)), Donc :   
-- eval ( Plus (Const 2)  (Fois (Const 3)(Const 4))) -> (eval (Const 2)) + (eval(Fois (Const 3)(Const 4)))
-- On peut remplacer eval(Const 2) par 2, on obtient :   
-- 2 + (eval(Fois (Const 3)(Const 4)))
-Ici X = (Const 3) et Y = (Const 4) Donc :   
-- 2 + (eval (Const 3)) * (eval(Const 4))
-- On peut remplacer eval(Const 3) par 3 et eval(Const 4) par 4 on obtient :   2 + (3*4) = 2 + 12 = 14   
-
-# Version visitor (avec Java)
-
-## Interface Visiteur
-``` java
-public interface Visiteur<R>{
-        public R visitConstante(Constante constante);
-        public R visitProd(Prod prod);
-        public R visitMoins(Moins moins);
-        public R visitPlus(Plus plus);       
-        public R visitPuissance(Puissance puissance);
-}
-```
-## Interface ExpressionAVisiter
-Elle a une seule méthode : accept . Laquelle prend en entrée un visiteur de type R et retourne une valeur de type R.
-``` java
-public interface ExpressionAVisiterr {
-    public  <R> R accept(Visiteur<R> e1);
-}
-```
-
-## Définition des opérateurs
-### Plus
-``` java
-public class Plus implements Expr{
-
-    private Expr expr1;
-    private Expr expr2;
+-   Opérations arithmétiques élémentaires :   
+    -   Division
     
-    public Plus(Expr expr1 , Expr expr2){
-        this.expr1 = expr1;
-        this.expr2 = expr2;
-    }
-
-    public <R> R accept (Visiteur<R> visiteur ){
-        return visiteur.visitPlus(this);
-    }
- //à définir : getExpr1();getExpr2()
-}
-``` 
-
-Les  opérateurs Prod et Moins sont construits de la même manière, c'est la méthode accept qui change.
-## Moins
-``` java
-public <R> R accept (Visiteur<R> visiteur ){
-        return visiteur.visitMoins(this);
-    }
-``` 
-
-## Prod
-``` java
-public <R> R accept (Visiteur<R> visiteur ){
-        return visiteur.visitProd(this);
-    }
-``` 
-
-Le cas de Constante est un peu différent puisqu'il son opérande n'est pas une expression mais une valeur numérique
-
-## Constante
-```java
-public class Constante implements Expr{
-    private double valeur;
+    -   Multiplication
     
-    public Constante (double valeur){
-        this.valeur = valeur;
-    }
-    public <R> R accept (Visiteur<R> visiteur ){
-        return visiteur.visitConstante(this);
-    }
- //à définir : getValeur();
-}
-```
- 
+    -   Addition
 
-## Classe VisiteurCalculReel
-```java
-public class VisiteurCalculReel implements Visiteur<Double> {
+    -   Soustraction   
 
-    public Double  visitConstante(Constante constante){
-        return constante.getValeur();
-    }
+-   Possibilité d'effacer le dernier caractère saisi
 
-    public Double visitProd(Prod prod){
-        Double evalExpr1 =  prod.getExpr1().accept(this);
-        Double evalExpr2 =  prod.getExpr2().accept(this);
-        return evalExpr1 * evalExpr2;
-    }
-    public Double visitMoins(Moins moins){
-        Double evalExpr1 =  moins.getExpr1().accept(this);
-        Double evalExpr2 =  moins.getExpr2().accept(this);
-        return evalExpr1 - evalExpr2;
-    }
-    public Double visitPlus(Plus plus){
-        Double evalExpr1 =  plus.getExpr1().accept(this);
-        Double evalExpr2 =  plus.getExpr2().accept(this);
-        return evalExpr1 + evalExpr2;
-    }
-    public Double visitPuissance(Puissance puissance){
-        Double evalExpr1 =  puissance.getExpr1().accept(this);
-        double n =  puissance.getN();
-        return Math.pow(evalExpr1 , n);
-    }
-}
+-   Reprendre le calcul à partir de la dernière valeur calculée.
 
-```
-On viste l'expression : new Plus (new Constante(2) , new Produit(new Constante(3) , new Constante(4)))   
-On obtient successivement :   
--   (new Constante(2)) + (new Produit(new Constante(3) , new Constante(4)))
--    2 + ((new Constante(3) * new Constante(4)))
--   2  + ( 3 * 4)
--   14
+## Méthode d'évaluation d'une expression artithmétique
 
-# Et si ?
-## Et si on voulait ajouter un opérateur?
-![](plusDeVisites.png)
+L'expression **expression** est stockée sous forme de chaîne de caractères.   
+Deux piles sont initialisées : 
+-   **ops** pour stocker les opérateurs : + - * / 
+-   **pileExpression** pour stocker les valeurs sucessives de **expression**.  
 
-Par exemple comment ajouter les opérateurs cosinus, sinus et tangeante?   
-Dans les deux cas il faut :
--   les ajouter au type expression
--   définir leur calcul   
+La méthode *effectuerCalcul(ops , pile expression)* utilisée est définie ainsi:
+    
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'>​public <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> effectuerCalcul(Stack&lt;Character&gt; ops, Stack&lt;Double&gt; pileExpression) <span style='font-weight:bold;color:#D3171B'>{</span>
+       ​char operateur = ops.pop();
+       ​double valeur2 = pileExpression.pop();
+       ​double valeur1 = pileExpression.pop();
+       ​double resultat = 0;
+       
+       ​switch (operateur) <span style='font-weight:bold;color:#D3171B'>{</span>
+       ​case plus:
+           ​resultat = valeur1 + valeur2;
+           ​break;
+       ​case moins:
+           ​resultat = valeur1 - valeur2;
+           ​break;
+       ​case mul:
+           ​resultat = valeur1 * valeur2;
+           ​break;
+       ​case div:
+           ​if (valeur2 == 0)
+               ​throw <span style='font-weight:bold;color:#7B0052;'>new</span> UnsupportedOperationException(<span style='color:#2A00FF'>"division par zero impossible"</span>);
+           ​resultat = (<span style='font-weight:bold;color:#7B0052;'>double</span>) (valeur1 / valeur2);
+           ​break;
+       ​<span style='font-weight:bold;color:#D3171B'>}</span>
+       ​pileExpression.push(resultat);
+   ​<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+Pour rappel, la méthode *pop* d'une pile retourne son sommet et le retire de la pile.
 
-Donc en elm :
-``` elm
-type Expr = Plus     Expr Expr
-            | Moins  Expr Expr
-            | Fois   Expr Expr 
-            | Const  Float
+Chaque caractère de l'expression arithmétique est lu.   
 
-```
-devient   
+-   Si le caractère est un opérateur (**opi**), alors :   
+    -   Soit l'opérateur au sommet (**opSommet**) de la pile **ops** est prioritaire par rapport à **opi** et dans ce cas la méthode *effectuerCalcul(ops , pile expression)* est appelée
 
-``` elm
-type Expr = Plus     Expr Expr
-            | Moins  Expr Expr
-            | Fois   Expr Expr 
-            | Const  Expr 
-            | Cos    Expr 
-            | Sin    Expr 
-            | Tan    Expr 
-```
-et trois cas doivent être ajoutés à éval   
--   Cos x ->    cos(eval x )
--   Sin x ->    sin(eval x )
--   Tan x ->    tan(eval x )
+    -   Soit il ne l'est pas et opi est simplement stockée au sommet de **ops**.   
+   
+-   Si le caractère est un chiffre alors cette lecture continue tant que le carcactère suivant est lui aussi un nombre ou un . (pour pouvoir stocker des réels)   
 
-En java c'est exactement le même principe.   
-On ajoute trois nouvelles méthodes à l'interface Visiteur   
-``` java
-public interface Visiteur<R>{
-        //.....  
-        public R visitCos(Cosinus cosinus);
-        public R visitSin(Sinus sinus);
-        public R visitTan(Tan tan);
-}
-```
-Avec les trois classes correspondantes   
-``` java
-public class Cosinus implements Expr{
-    private Expr expr1;
-    public Cosinus(Expr expr1){
-        this.expr1 = expr1;
-    }
-    public <R> R accept (Visiteur<R> visiteur ){
-        return visiteur.visitCos(this);
-    }
- //à définir : getExpr1();
-}
-``` 
-Sinus et Tan sont similaires, seule la fonction accept est modifiée :   
-``` java
-    public <R> R accept (Visiteur<R> visiteur ){
-        return visiteur.visitSin(this);
-    }
-    public <R> R accept (Visiteur<R> visiteur ){
-        return visiteur.visitTan(this);
-    }
-``` 
-Il faut maintenant indiquer comment ces expressions sont évaluées   
-Dans calcul : 
-   ``` java
-   public Double visitCos(Cosinus cosinus){
-                Double evalExpr1 =  cosinus.getExpr1().accept(this);
-                return Math.cos(evalExpr1);
-            }
-    public Double visitSin(Sinus sinus){
-                Double evalExpr1 =  sinus.getExpr1().accept(this);
-                return Math.sin(evalExpr1);
-            }
-    public Double visitTan(Tan tan){
-                Double evalExpr1 =  tan.getExpr1().accept(this);
-                return Math.tan(evalExpr1);
-            }
- ```
-## Et si on voulait changer la méthode de calcul?
-![](plusDeVisiteurs.png)
+-   Si le caractère est une parenthèse ouvrante alors il est stocké au sommet de **ops**. 
 
-On pourrait vouloir visiter la même expression mais changer l'implémentation du visiteur.
-Par exemple 
--   Plus(d1,d2)     =   "(d1 + d2)"
--   Moins(d1,d2)    =   "(d1 - d2)"
--   Prod(d1,d2)     =   "(d1 * d2)"
+-   Si le caractère est une parenthèse fermante alors tant que le sommet de **ops** n'est pas une parenthèse ouvrante la méthode *effectuerCalcul(ops , pile expression)* est appelée.   
+Ensuite **ops** est dépilé.   
+Par exemple pour l'expression : 1+(2+(3+4)) les états successifs de **pileExpression** sont   
+        
+        1  
+        1 2    
+        1 2 3    
+        1 2 3 4      
+        1 2 7   
+        1 9    
+        10   
+    et ceux de **ops** sont   
+    
+        +   
+        + (    
+        + ( +   
+        + ( + (        
+        + ( + ( +
 
-Pour cela il faut ajouter une nouvelle classe : VisiteurOperationString, laquelle implémentera Visiteur.   
-Il faut uniquement définir les méthodes de l'interface Visiteur : 
-```java
-public class VisiteurCalculString  implements Visiteur<String> {
-  public String  visitConstante(Constante constante){
-        return String.valueOf(constante.getValeur());
-    }
+## Exemples
 
-    public String visitProd(Prod prod){
-        String evalExpr1 =  prod.getExpr1().accept(this);
-        String evalExpr2 =  prod.getExpr2().accept(this);
-        return "(" +  evalExpr1 + "*" + evalExpr2 +")";
-    }
-    public String visitMoins(Moins moins){
-        String evalExpr1 =  moins.getExpr1().accept(this);
-        String evalExpr2 =  moins.getExpr2().accept(this);
-        return "(" +  evalExpr1 + "-" + evalExpr2 +")";
-    }
-    public String visitPlus(Plus plus){
-        String evalExpr1 =  plus.getExpr1().accept(this);
-        String evalExpr2 =  plus.getExpr2().accept(this);
-        return "(" +  evalExpr1 + "+" + evalExpr2 +")";
-    }
-    public String visitPuissance(Puissance puissance){
-        String evalExpr1 =  puissance.getExpr1().accept(this);
-        double n =  puissance.getN();
-        return "(" +  evalExpr1 + "^" + n +")";
-    }
-}
-```
+Illustrations de ce qui se passe au niveau de la pile des opérateurs et de la pile servant à stocker les résultats successifs de l'évaluation d'une expression.   
+
+Ces résultats sont aussi observables dans le fichier généré par les logs : **logs/logPileCalculs.log**   
+
+![](exemplesPile.jpg)
+
+## Utilisation :
+
+-   Cloner le projet
+-   Dans un terminal : java -jar calculatrice-0.1.0.jar
