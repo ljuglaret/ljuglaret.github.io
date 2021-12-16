@@ -6,10 +6,10 @@ thumbnailImage: ../img/calculatrice0.png
 
 ---
 
-![](calculatriceImg/calculatrice.png)
+![](calculatrice.png)
 
 # Version case of (avec elm)
-L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.   
+L évaluation d une expression arithmetique est recursive, Plus Moins et Fois operent sur des Expressions.  
 
 Par exemple "2 + (3*4)" est une expression composée elle même de deux expressions:
 -   2 
@@ -161,7 +161,7 @@ On obtient successivement :
 
 # Et si ?
 ## Et si on voulait ajouter un opérateur?
-![](calculatriceImg/plusDeVisites.png)
+![](plusDeVisites.png)
 
 Par exemple comment ajouter les opérateurs cosinus, sinus et tangeante?   
 Dans les deux cas il faut :
@@ -241,7 +241,7 @@ Dans calcul :
             }
  ```
 ## Et si on voulait changer la méthode de calcul?
-![](calculatriceImg/plusDeVisiteurs.png)
+![](plusDeVisiteurs.png)
 
 On pourrait vouloir visiter la même expression mais changer l'implémentation du visiteur.
 Par exemple 
