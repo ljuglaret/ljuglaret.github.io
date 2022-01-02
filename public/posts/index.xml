@@ -6,7 +6,28 @@
     <description>Recent content in Posts on Laure Juglaret</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Dec 2021 00:54:00 +0100</lastBuildDate><atom:link href="https://ljuglaret.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 22:36:10 +0100</lastBuildDate><atom:link href="https://ljuglaret.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shifumi</title>
+      <link>https://ljuglaret.github.io/2022/01/shifumi/</link>
+      <pubDate>Sun, 02 Jan 2022 22:36:10 +0100</pubDate>
+      
+      <guid>https://ljuglaret.github.io/2022/01/shifumi/</guid>
+      <description>Demo</description>
+    </item>
+    
+    <item>
+      <title>Happy New Year</title>
+      <link>https://ljuglaret.github.io/2021/12/happy-new-year/</link>
+      <pubDate>Wed, 29 Dec 2021 19:05:37 +0100</pubDate>
+      
+      <guid>https://ljuglaret.github.io/2021/12/happy-new-year/</guid>
+      <description>Mise en place Arborescence du projet C&amp;rsquo;est le dossier build qui constituera la branche gh-pages
+Le dossier src/assets contients toutes les sources externes utilisées dans l&amp;rsquo;application (ici les images et les .json), pour les importer dans les fichiers tsx : import * as dataC from &amp;lsquo;../src/assets/[chemin/nomDuFichier]&#39;;
+Lancer le projet git init (vérifier que le dossier build n&amp;rsquo;est pas dans .gitignore) npm start
+Déploiement sur Github Sur github : settings =&amp;gt; pages Dans le fichier package.</description>
+    </item>
+    
     <item>
       <title>Happy New Year</title>
       <link>https://ljuglaret.github.io/2021/12/happy-new-year/</link>
