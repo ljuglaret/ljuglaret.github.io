@@ -5,4 +5,5 @@ draft: true
 thumbnailImage: ../img/shifumi.png
 ---
 
+![](shifumi.png)
 [Demo](https://ljuglaret.github.io/shifumiapp/)
