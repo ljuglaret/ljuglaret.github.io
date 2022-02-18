@@ -34,7 +34,7 @@
     }
     
   },
-  "description": "Graphes Un graphe est une représentation d\u0026rsquo;un modèle composé de sommets (appelés noeuds)et d\u0026rsquo;arêtes (appelés lien) reliant certains de ces sommets.\nExemple 1 Représentation des conditions de victoire du jeu pierre feuille ciseaux Mise en place Qu\u0026rsquo;il s\u0026rsquo;agisse de simulation de lancers de pièce ou des règles d\u0026rsquo;un jeu le principe est le même : Créer chaque noeuds et établir les liens qui existent entre eux.\nCe qui peut se faire ainsi dans l\u0026rsquo;exemple du jeu :",
+  "description": "",
   "keywords": []
 }
 
@@ -45,26 +45,18 @@
 <meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Laure Juglaret">
 <meta name="keywords" content="">
-<meta name="description" content="Graphes Un graphe est une représentation d&rsquo;un modèle composé de sommets (appelés noeuds)et d&rsquo;arêtes (appelés lien) reliant certains de ces sommets.
-Exemple 1 Représentation des conditions de victoire du jeu pierre feuille ciseaux Mise en place Qu&rsquo;il s&rsquo;agisse de simulation de lancers de pièce ou des règles d&rsquo;un jeu le principe est le même : Créer chaque noeuds et établir les liens qui existent entre eux.
-Ce qui peut se faire ainsi dans l&rsquo;exemple du jeu :">
+<meta name="description" content="">
 
 
-<meta property="og:description" content="Graphes Un graphe est une représentation d&rsquo;un modèle composé de sommets (appelés noeuds)et d&rsquo;arêtes (appelés lien) reliant certains de ces sommets.
-Exemple 1 Représentation des conditions de victoire du jeu pierre feuille ciseaux Mise en place Qu&rsquo;il s&rsquo;agisse de simulation de lancers de pièce ou des règles d&rsquo;un jeu le principe est le même : Créer chaque noeuds et établir les liens qui existent entre eux.
-Ce qui peut se faire ainsi dans l&rsquo;exemple du jeu :">
+<meta property="og:description" content="">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Graphes">
 <meta name="twitter:title" content="Graphes">
 <meta property="og:url" content="https://ljuglaret.github.io/2021/12/graphes/">
 <meta property="twitter:url" content="https://ljuglaret.github.io/2021/12/graphes/">
 <meta property="og:site_name" content="Laure Juglaret">
-<meta property="og:description" content="Graphes Un graphe est une représentation d&rsquo;un modèle composé de sommets (appelés noeuds)et d&rsquo;arêtes (appelés lien) reliant certains de ces sommets.
-Exemple 1 Représentation des conditions de victoire du jeu pierre feuille ciseaux Mise en place Qu&rsquo;il s&rsquo;agisse de simulation de lancers de pièce ou des règles d&rsquo;un jeu le principe est le même : Créer chaque noeuds et établir les liens qui existent entre eux.
-Ce qui peut se faire ainsi dans l&rsquo;exemple du jeu :">
-<meta name="twitter:description" content="Graphes Un graphe est une représentation d&rsquo;un modèle composé de sommets (appelés noeuds)et d&rsquo;arêtes (appelés lien) reliant certains de ces sommets.
-Exemple 1 Représentation des conditions de victoire du jeu pierre feuille ciseaux Mise en place Qu&rsquo;il s&rsquo;agisse de simulation de lancers de pièce ou des règles d&rsquo;un jeu le principe est le même : Créer chaque noeuds et établir les liens qui existent entre eux.
-Ce qui peut se faire ainsi dans l&rsquo;exemple du jeu :">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
 <meta property="og:locale" content="en">
 
   
@@ -281,86 +273,7 @@ Ce qui peut se faire ainsi dans l&rsquo;exemple du jeu :">
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <h3 id="graphes">Graphes</h3>
-<p>Un graphe est une représentation d&rsquo;un modèle composé de sommets (appelés <strong>noeuds</strong>)et d&rsquo;arêtes (appelés <strong>lien</strong>) reliant certains de ces sommets.</p>
-<h3 id="exemple-1">Exemple 1</h3>
-<p>Représentation des conditions de victoire du jeu pierre feuille ciseaux
-<img src="pfc/pfc.jpg" alt="exp"></p>
-<h2 id="mise-en-place">Mise en place</h2>
-<p>Qu&rsquo;il s&rsquo;agisse de simulation de lancers de pièce ou des règles d&rsquo;un jeu le principe est le même : <strong>Créer chaque noeuds</strong> et <strong>établir les liens</strong> qui existent entre eux.<br>
-Ce qui peut se faire ainsi dans l&rsquo;exemple du jeu :</p>
-<pre tabindex="0"><code>creerGraph  ::  Gr L.Text L.Text
-creerGraph  = mkGraph
-[(0,pack &quot;Pierre&quot;) , (1,pack &quot;Ciseaux&quot;)  , (2,pack &quot;Feuille&quot;)]
-[(0,1,pack &quot;Casse&quot;), (1,2,pack&quot;Coupent&quot;) , (2,3,pack&quot;Enveloppe&quot;)]
-</code></pre><p>Reprenons le jeu précédent mais enrichissons le de deux nouveaux choix : Lezard et Spock</p>
-<p><img src="pfc/sheldon.gif" alt="gif"></p>
-<pre tabindex="0"><code>creerGraph :: Gr L.Text L.Text
-creerGraph
-= mkGraph
-(
-    [(0,pack &quot;Pierre&quot;),
-    (1,pack&quot;Ciseaux&quot;),
-    (2,pack&quot;Feuille&quot;),
-    (3,pack &quot;Lezard&quot;),
-    (4, &quot;Spock&quot;)
-    ]
-)
-(
-    [(0,1,pack&quot;Casse&quot;),
-    (1,2,pack&quot;Coupent&quot;),
-    (2,0,pack&quot;Enveloppe&quot;),
-    (3,4,pack&quot;Empoisonne&quot;),
-    (4,1,pack&quot;Ecrabouille&quot;),
-    (1,3,pack&quot;Decapite&quot;),
-    (3,2,pack&quot;Mange&quot;),
-    (2,4,pack&quot;Repousse&quot;),
-    (4,0,pack&quot;Detruit&quot;),
-    (2,3,pack&quot;Ecrase&quot;)
-])
-</code></pre><h2 id="inconvenients-et-solutions">Inconvenients et solutions</h2>
-<h3 id="le-code-est-répétitif-on-peut-le-factoriser">Le code est répétitif, on peut le factoriser</h3>
-<pre tabindex="0"><code>creaGr ::  Gr L.Text L.Text
-creaGr  = 
-  let
-    listTaill   =   [0.. ((List.length listChoix) - 1 )]
-    affChoix    =   List.map(\elt -&gt; pack(show elt)) listChoix 
-    zipl        =   List.zip ListTaill affChoix
-    fl          =   List.map
-                        (\(x,y,z) -&gt; (x,y,pack (show z))) associe2 in mkGraph zipl fl
-</code></pre><h3 id="il-y-a-5-noeuds-et-10-relations-utiliser-des-types-plutôt-que-des-chaînes-de-caractères">Il y a 5 noeuds et 10 relations, utiliser des types plutôt que des chaînes de caractères.</h3>
-<pre tabindex="0"><code>data Choix = Pierre 
-            |Feuille
-            |Ciseaux|Lezard
-            |Spock  deriving (Show)
-
-data PointFort  = Casse 
-  |Coupent 
-  |Enveloppe  
-  |Repousse 
-  |Ecrabouille 
-  |Ecrase 
-  |Empoisonne  
-  |Detruit  
-  |Mange 
-  |Decapitent deriving(Show)
-</code></pre><h3 id="définir-les-relations-entre-les-noeuds">Définir les relations entre les noeuds</h3>
-<pre tabindex="0"><code>associe ::  [(Int,Int, PointFort)]
-associe = 
-
-List.map(\(a,b,elt) -&gt; (numero a, numero b, elt))[
-  (Ciseaux, Feuille, Coupent),
-  (Feuille, Pierre,  Enveloppe),
-  (Pierre,  Ciseaux, Casse),
-  (Lezard,  Spock,   Empoisonne),
-  (Spock,   Ciseaux, Ecrabouille),
-  (Ciseaux, Lezard,  Decapitent),
-  (Lezard,  Feuille, Mange),
-  (Feuille, Spock,   Repousse),
-  (Spock,   Pierre , Detruit),
-  (Pierre,  Lezard,  Ecrase)]
-</code></pre><p>(Lien vers le code complet)[https://github.com/ljuglaret/Graphes/blob/gh-pages/gr.hs]</p>
-
+              
               
 
 
