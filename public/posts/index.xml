@@ -52,9 +52,7 @@ Déploiement sur Github Sur github : settings =&amp;gt; pages Dans le fichier pa
       <pubDate>Thu, 02 Dec 2021 19:05:37 +0100</pubDate>
       
       <guid>https://ljuglaret.github.io/2021/12/graphes/</guid>
-      <description>Graphes Un graphe est une représentation d&amp;rsquo;un modèle composé de sommets (appelés noeuds)et d&amp;rsquo;arêtes (appelés lien) reliant certains de ces sommets.
-Exemple 1 Représentation des conditions de victoire du jeu pierre feuille ciseaux Mise en place Qu&amp;rsquo;il s&amp;rsquo;agisse de simulation de lancers de pièce ou des règles d&amp;rsquo;un jeu le principe est le même : Créer chaque noeuds et établir les liens qui existent entre eux.
-Ce qui peut se faire ainsi dans l&amp;rsquo;exemple du jeu :</description>
+      <description></description>
     </item>
     
     <item>
@@ -74,7 +72,7 @@ Par exemple &amp;ldquo;2 + (3*4)&amp;rdquo; est une expression composée elle m�
       <pubDate>Tue, 23 Nov 2021 19:05:37 +0100</pubDate>
       
       <guid>https://ljuglaret.github.io/2021/11/bot-twitter/</guid>
-      <description></description>
+      <description>[https://twitter.com/ABookADayBot][Lien]</description>
     </item>
     
     <item>
@@ -84,6 +82,17 @@ Par exemple &amp;ldquo;2 + (3*4)&amp;rdquo; est une expression composée elle m�
       
       <guid>https://ljuglaret.github.io/2021/10/syracuse/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>ElmDate</title>
+      <link>https://ljuglaret.github.io/2018/09/elmdate/</link>
+      <pubDate>Tue, 25 Sep 2018 09:12:55 +0100</pubDate>
+      
+      <guid>https://ljuglaret.github.io/2018/09/elmdate/</guid>
+      <description>Créer un type Date en elm  Première approche type alias Date = {jour : Int , mois : Int, annee : Int}  Quel est le problème
+ jour est un entier relatif , or il doit etre dans intervalle dependant du mois mois est un entier relatif, or il doit etre compris entre 1 et 12   Exemples
+(jour = 11 , mois = 12, annee = 1988) est une date valide mais</description>
     </item>
     
   </channel>
