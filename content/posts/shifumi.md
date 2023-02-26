@@ -6,4 +6,6 @@ thumbnailImage: ../img/shifumi.png
 ---
 
 ![](shifumi.png)
-[Demo](https://ljuglaret.github.io/shifumiapp/)
+[Demo][def]
+
+[def]: https://ljuglaret.github.io/shifumiapp/

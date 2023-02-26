@@ -1,7 +1,11 @@
 ---
-title: "FormulaireAngular"
+title: "Formulaire Angular"
 date: 2022-11-18T20:30:09+01:00
-draft: true
+layout: forward
+target: https://ljuglaret.github.io/FormulaireAngular
+draft: false
 ---
 
-[Demo] (https://ljuglaret.github.io/FormulaireAngular/#/)
+[Demo][def]
+
+[def]: https://ljuglaret.github.io/FormulaireAngular/#/
